@@ -1,0 +1,23 @@
+{
+  "name": "Template RE Project",
+  "description": "Template Framework of Real Estate templates base",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-modal": "^0.8.0",
+    "reset-scss": "^2.0.2",
+    "susy": "^2.2.12",
+    "swiper": "^3.4.2",
+    "select2": "^4.0.3"
+  }
+}

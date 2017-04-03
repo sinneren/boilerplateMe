@@ -1,0 +1,19 @@
+{
+  "name": "TREF",
+  "version": "1.0.0",
+  "description": "Not first Gulp Project",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "browser-sync": "^2.11.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-postcss": "^6.2.0",
+    "postcss-cssnext": "^2.8.0",
+    "css-mqpacker": "^5.0.1",
+    "gulp-clean-css": "^1.0.0",
+    "run-sequence": "^1.2.2"
+  }
+}
