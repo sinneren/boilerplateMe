@@ -1,0 +1,8 @@
+@mixin cf() {
+  &:after,
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

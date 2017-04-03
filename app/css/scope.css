@@ -1,0 +1,1310 @@
+/* line 5, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* line 26, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 30, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+body {
+  line-height: 1; }
+
+/* line 33, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 36, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 39, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 44, C:/work/assembly/template/bower_components/reset-scss/_reset-src.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 1, C:/work/assembly/template/bower_components/jquery-modal/jquery.modal.css */
+.blocker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+  background-color: rgba(0, 0, 0, .75);
+  text-align: center; }
+
+/* line 13, C:/work/assembly/template/bower_components/jquery-modal/jquery.modal.css */
+.blocker:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.05em; }
+
+/* line 20, C:/work/assembly/template/bower_components/jquery-modal/jquery.modal.css */
+.blocker.behind {
+  background-color: transparent; }
+
+/* line 23, C:/work/assembly/template/bower_components/jquery-modal/jquery.modal.css */
+.modal {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 90%;
+  background: #fff;
+  padding: 15px 30px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  text-align: left; }
+
+/* line 46, C:/work/assembly/template/bower_components/jquery-modal/jquery.modal.css */
+.modal a.close-modal {
+  position: absolute;
+  top: -12.5px;
+  right: -12.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url("data:image/png;base64,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") no-repeat 0 0; }
+
+/* line 57, C:/work/assembly/template/bower_components/jquery-modal/jquery.modal.css */
+.modal-spinner {
+  display: none;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -32px;
+  margin-top: -32px;
+  background: url("data:image/gif;base64,R0lGODlhIAAgAPMAABEREf///0VFRYKCglRUVG5ubsvLy62trTQ0NCkpKU5OTuLi4vr6+gAAAAAAAAAAACH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAIAAgAAAE5xDISWlhperN52JLhSSdRgwVo1ICQZRUsiwHpTJT4iowNS8vyW2icCF6k8HMMBkCEDskxTBDAZwuAkkqIfxIQyhBQBFvAQSDITM5VDW6XNE4KagNh6Bgwe60smQUB3d4Rz1ZBApnFASDd0hihh12BkE9kjAJVlycXIg7CQIFA6SlnJ87paqbSKiKoqusnbMdmDC2tXQlkUhziYtyWTxIfy6BE8WJt5YJvpJivxNaGmLHT0VnOgSYf0dZXS7APdpB309RnHOG5gDqXGLDaC457D1zZ/V/nmOM82XiHRLYKhKP1oZmADdEAAAh+QQACgABACwAAAAAIAAgAAAE6hDISWlZpOrNp1lGNRSdRpDUolIGw5RUYhhHukqFu8DsrEyqnWThGvAmhVlteBvojpTDDBUEIFwMFBRAmBkSgOrBFZogCASwBDEY/CZSg7GSE0gSCjQBMVG023xWBhklAnoEdhQEfyNqMIcKjhRsjEdnezB+A4k8gTwJhFuiW4dokXiloUepBAp5qaKpp6+Ho7aWW54wl7obvEe0kRuoplCGepwSx2jJvqHEmGt6whJpGpfJCHmOoNHKaHx61WiSR92E4lbFoq+B6QDtuetcaBPnW6+O7wDHpIiK9SaVK5GgV543tzjgGcghAgAh+QQACgACACwAAAAAIAAgAAAE7hDISSkxpOrN5zFHNWRdhSiVoVLHspRUMoyUakyEe8PTPCATW9A14E0UvuAKMNAZKYUZCiBMuBakSQKG8G2FzUWox2AUtAQFcBKlVQoLgQReZhQlCIJesQXI5B0CBnUMOxMCenoCfTCEWBsJColTMANldx15BGs8B5wlCZ9Po6OJkwmRpnqkqnuSrayqfKmqpLajoiW5HJq7FL1Gr2mMMcKUMIiJgIemy7xZtJsTmsM4xHiKv5KMCXqfyUCJEonXPN2rAOIAmsfB3uPoAK++G+w48edZPK+M6hLJpQg484enXIdQFSS1u6UhksENEQAAIfkEAAoAAwAsAAAAACAAIAAABOcQyEmpGKLqzWcZRVUQnZYg1aBSh2GUVEIQ2aQOE+G+cD4ntpWkZQj1JIiZIogDFFyHI0UxQwFugMSOFIPJftfVAEoZLBbcLEFhlQiqGp1Vd140AUklUN3eCA51C1EWMzMCezCBBmkxVIVHBWd3HHl9JQOIJSdSnJ0TDKChCwUJjoWMPaGqDKannasMo6WnM562R5YluZRwur0wpgqZE7NKUm+FNRPIhjBJxKZteWuIBMN4zRMIVIhffcgojwCF117i4nlLnY5ztRLsnOk+aV+oJY7V7m76PdkS4trKcdg0Zc0tTcKkRAAAIfkEAAoABAAsAAAAACAAIAAABO4QyEkpKqjqzScpRaVkXZWQEximw1BSCUEIlDohrft6cpKCk5xid5MNJTaAIkekKGQkWyKHkvhKsR7ARmitkAYDYRIbUQRQjWBwJRzChi9CRlBcY1UN4g0/VNB0AlcvcAYHRyZPdEQFYV8ccwR5HWxEJ02YmRMLnJ1xCYp0Y5idpQuhopmmC2KgojKasUQDk5BNAwwMOh2RtRq5uQuPZKGIJQIGwAwGf6I0JXMpC8C7kXWDBINFMxS4DKMAWVWAGYsAdNqW5uaRxkSKJOZKaU3tPOBZ4DuK2LATgJhkPJMgTwKCdFjyPHEnKxFCDhEAACH5BAAKAAUALAAAAAAgACAAAATzEMhJaVKp6s2nIkolIJ2WkBShpkVRWqqQrhLSEu9MZJKK9y1ZrqYK9WiClmvoUaF8gIQSNeF1Er4MNFn4SRSDARWroAIETg1iVwuHjYB1kYc1mwruwXKC9gmsJXliGxc+XiUCby9ydh1sOSdMkpMTBpaXBzsfhoc5l58Gm5yToAaZhaOUqjkDgCWNHAULCwOLaTmzswadEqggQwgHuQsHIoZCHQMMQgQGubVEcxOPFAcMDAYUA85eWARmfSRQCdcMe0zeP1AAygwLlJtPNAAL19DARdPzBOWSm1brJBi45soRAWQAAkrQIykShQ9wVhHCwCQCACH5BAAKAAYALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq+E71SRQeyqUToLA7VxF0JDyIQh/MVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiRMDjI0Fd30/iI2UA5GSS5UDj2l6NoqgOgN4gksEBgYFf0FDqKgHnyZ9OX8HrgYHdHpcHQULXAS2qKpENRg7eAMLC7kTBaixUYFkKAzWAAnLC7FLVxLWDBLKCwaKTULgEwbLA4hJtOkSBNqITT3xEgfLpBtzE/jiuL04RGEBgwWhShRgQExHBAAh+QQACgAHACwAAAAAIAAgAAAE7xDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfZiCqGk5dTESJeaOAlClzsJsqwiJwiqnFrb2nS9kmIcgEsjQydLiIlHehhpejaIjzh9eomSjZR+ipslWIRLAgMDOR2DOqKogTB9pCUJBagDBXR6XB0EBkIIsaRsGGMMAxoDBgYHTKJiUYEGDAzHC9EACcUGkIgFzgwZ0QsSBcXHiQvOwgDdEwfFs0sDzt4S6BK4xYjkDOzn0unFeBzOBijIm1Dgmg5YFQwsCMjp1oJ8LyIAACH5BAAKAAgALAAAAAAgACAAAATwEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq+E71SRQeyqUToLA7VxF0JDyIQh/MVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GGl6NoiPOH16iZKNlH6KmyWFOggHhEEvAwwMA0N9GBsEC6amhnVcEwavDAazGwIDaH1ipaYLBUTCGgQDA8NdHz0FpqgTBwsLqAbWAAnIA4FWKdMLGdYGEgraigbT0OITBcg5QwPT4xLrROZL6AuQAPUS7bxLpoWidY0JtxLHKhwwMJBTHgPKdEQAACH5BAAKAAkALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq+E71SRQeyqUToLA7VxF0JDyIQh/MVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GAULDJCRiXo1CpGXDJOUjY+Yip9DhToJA4RBLwMLCwVDfRgbBAaqqoZ1XBMHswsHtxtFaH1iqaoGNgAIxRpbFAgfPQSqpbgGBqUD1wBXeCYp1AYZ19JJOYgH1KwA4UBvQwXUBxPqVD9L3sbp2BNk2xvvFPJd+MFCN6HAAIKgNggY0KtEBAAh+QQACgAKACwAAAAAIAAgAAAE6BDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfYIDMaAFdTESJeaEDAIMxYFqrOUaNW4E4ObYcCXaiBVEgULe0NJaxxtYksjh2NLkZISgDgJhHthkpU4mW6blRiYmZOlh4JWkDqILwUGBnE6TYEbCgevr0N1gH4At7gHiRpFaLNrrq8HNgAJA70AWxQIH1+vsYMDAzZQPC9VCNkDWUhGkuE5PxJNwiUK4UfLzOlD4WvzAHaoG9nxPi5d+jYUqfAhhykOFwJWiAAAIfkEAAoACwAsAAAAACAAIAAABPAQyElpUqnqzaciSoVkXVUMFaFSwlpOCcMYlErAavhOMnNLNo8KsZsMZItJEIDIFSkLGQoQTNhIsFehRww2CQLKF0tYGKYSg+ygsZIuNqJksKgbfgIGepNo2cIUB3V1B3IvNiBYNQaDSTtfhhx0CwVPI0UJe0+bm4g5VgcGoqOcnjmjqDSdnhgEoamcsZuXO1aWQy8KAwOAuTYYGwi7w5h+Kr0SJ8MFihpNbx+4Erq7BYBuzsdiH1jCAzoSfl0rVirNbRXlBBlLX+BP0XJLAPGzTkAuAOqb0WT5AH7OcdCm5B8TgRwSRKIHQtaLCwg1RAAAOwAAAAAAAAAAAA==") #111 no-repeat center center;
+  -webkit-border-radius: 8px;
+  border-radius: 8px; }
+
+/**
+ * Swiper 3.4.2
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * 
+ * http://www.idangero.us/swiper/
+ * 
+ * Copyright 2017, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Licensed under MIT
+ * 
+ * Released on: March 10, 2017
+ */
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-no-flexbox .swiper-slide {
+  float: left; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-vertical > .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-multirow > .swiper-wrapper {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-slide {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0 auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+  height: auto; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-transition-property: -webkit-transform,height;
+  -webkit-transition-property: height,-webkit-transform;
+  transition-property: height,-webkit-transform;
+  transition-property: transform,height;
+  transition-property: transform,height,-webkit-transform; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+  touch-action: pan-x; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  left: 10px;
+  right: auto; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-prev.swiper-button-black, .swiper-container-rtl .swiper-button-next.swiper-button-black {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E"); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  right: 10px;
+  left: auto; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-next.swiper-button-black, .swiper-container-rtl .swiper-button-prev.swiper-button-black {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E"); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 10; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 10px;
+  left: 0;
+  width: 100%; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background: #000;
+  opacity: .2; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-white .swiper-pagination-bullet {
+  background: #fff; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-white .swiper-pagination-bullet-active {
+  background: #fff; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-black .swiper-pagination-bullet-active {
+  background: #000; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-vertical > .swiper-pagination-bullets {
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 5px 0;
+  display: block; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 5px; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-progress {
+  background: #000000;
+  background: rgba(0, 0, 0, .25);
+  position: absolute; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background: #007aff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-horizontal > .swiper-pagination-progress {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 0; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-vertical > .swiper-pagination-progress {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-progress.swiper-pagination-white {
+  background: #ffffff;
+  background: rgba(255, 255, 255, .5); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-progress.swiper-pagination-white .swiper-pagination-progressbar {
+  background: #fff; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-pagination-progress.swiper-pagination-black .swiper-pagination-progressbar {
+  background: #000; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d {
+  -webkit-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d .swiper-slide-shadow-left {
+  background-image: -webkit-gradient(linear, left top, right top, left, right);
+  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, .5), transparent);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, .5)), to(transparent));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, .5), transparent); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: -webkit-gradient(linear, right top, left top, left, right);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5), transparent);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(transparent));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .5), transparent); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d .swiper-slide-shadow-top {
+  background-image: -webkit-gradient(linear, left top, left bottom, left, right);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .5), transparent);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, .5)), to(transparent));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .5), transparent); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-3d .swiper-slide-shadow-bottom {
+  background-image: -webkit-gradient(linear, left bottom, left top, left, right);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .5), transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(transparent));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), transparent); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-coverflow .swiper-wrapper, .swiper-container-flip .swiper-wrapper {
+  -ms-perspective: 1200px; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube, .swiper-container-flip {
+  overflow: visible; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-slide, .swiper-container-flip .swiper-slide {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-slide .swiper-slide, .swiper-container-flip .swiper-slide .swiper-slide {
+  pointer-events: none; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-slide-active, .swiper-container-cube .swiper-slide-active .swiper-slide-active, .swiper-container-flip .swiper-slide-active, .swiper-container-flip .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-slide-shadow-bottom, .swiper-container-cube .swiper-slide-shadow-left, .swiper-container-cube .swiper-slide-shadow-right, .swiper-container-cube .swiper-slide-shadow-top, .swiper-container-flip .swiper-slide-shadow-bottom, .swiper-container-flip .swiper-slide-shadow-left, .swiper-container-flip .swiper-slide-shadow-right, .swiper-container-flip .swiper-slide-shadow-top {
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-slide {
+  visibility: hidden;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube.swiper-container-rtl .swiper-slide {
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-slide-active, .swiper-container-cube .swiper-slide-next, .swiper-container-cube .swiper-slide-next + .swiper-slide, .swiper-container-cube .swiper-slide-prev {
+  pointer-events: auto;
+  visibility: visible; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-cube .swiper-cube-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .6;
+  -webkit-filter: blur(50px);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="50" /></filter></svg>#filter');
+  filter: blur(50px);
+  z-index: 0; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-fade .swiper-slide {
+  pointer-events: none;
+  -webkit-transition-property: opacity;
+  transition-property: opacity; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-fade .swiper-slide .swiper-slide {
+  pointer-events: none; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-fade .swiper-slide-active, .swiper-container-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-zoom-container > canvas, .swiper-zoom-container > img, .swiper-zoom-container > svg {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-scrollbar {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  position: relative;
+  -ms-touch-action: none;
+  background: #000000;
+  background: rgba(0, 0, 0, .1); }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-horizontal > .swiper-scrollbar {
+  position: absolute;
+  left: 1%;
+  bottom: 3px;
+  z-index: 50;
+  height: 5px;
+  width: 98%; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-container-vertical > .swiper-scrollbar {
+  position: absolute;
+  right: 3px;
+  top: 1%;
+  z-index: 50;
+  width: 5px;
+  height: 98%; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #000000;
+  background: rgba(0, 0, 0, .5);
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  left: 0;
+  top: 0; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-scrollbar-cursor-drag {
+  cursor: move; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+      transform-origin: 50%;
+  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  animation: swiper-preloader-spin 1s steps(12, end) infinite; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-lazy-preloader:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+/* line 15, C:/work/assembly/template/bower_components/Swiper/dist/css/swiper.min.css */
+.swiper-lazy-preloader-white:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/* line 1, C:/work/assembly/template/bower_components/select2/src/scss/core.scss */
+.select2-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle; }
+  /* line 1, C:/work/assembly/template/bower_components/select2/src/scss/_single.scss */
+  .select2-container .select2-selection--single {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none; }
+    /* line 12, C:/work/assembly/template/bower_components/select2/src/scss/_single.scss */
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      display: block;
+      padding-left: 8px;
+      padding-right: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    /* line 22, C:/work/assembly/template/bower_components/select2/src/scss/_single.scss */
+    .select2-container .select2-selection--single .select2-selection__clear {
+      position: relative; }
+  /* line 29, C:/work/assembly/template/bower_components/select2/src/scss/_single.scss */
+  .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-right: 8px;
+    padding-left: 20px; }
+  /* line 1, C:/work/assembly/template/bower_components/select2/src/scss/_multiple.scss */
+  .select2-container .select2-selection--multiple {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    min-height: 32px;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none; }
+    /* line 12, C:/work/assembly/template/bower_components/select2/src/scss/_multiple.scss */
+    .select2-container .select2-selection--multiple .select2-selection__rendered {
+      display: inline-block;
+      overflow: hidden;
+      padding-left: 8px;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  /* line 21, C:/work/assembly/template/bower_components/select2/src/scss/_multiple.scss */
+  .select2-container .select2-search--inline {
+    float: left; }
+    /* line 24, C:/work/assembly/template/bower_components/select2/src/scss/_multiple.scss */
+    .select2-container .select2-search--inline .select2-search__field {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border: none;
+      font-size: 100%;
+      margin-top: 5px;
+      padding: 0; }
+      /* line 31, C:/work/assembly/template/bower_components/select2/src/scss/_multiple.scss */
+      .select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
+        -webkit-appearance: none; }
+
+/* line 1, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-dropdown {
+  background-color: white;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  left: -100000px;
+  width: 100%;
+  z-index: 1051; }
+
+/* line 19, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-results {
+  display: block; }
+
+/* line 23, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-results__options {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 29, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-results__option {
+  padding: 6px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none; }
+  /* line 35, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+  .select2-results__option[aria-selected] {
+    cursor: pointer; }
+
+/* line 40, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-container--open .select2-dropdown {
+  left: 0; }
+
+/* line 44, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-container--open .select2-dropdown--above {
+  border-bottom: none;
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0; }
+
+/* line 50, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-container--open .select2-dropdown--below {
+  border-top: none;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0; }
+
+/* line 56, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+.select2-search--dropdown {
+  display: block;
+  padding: 4px; }
+  /* line 60, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+  .select2-search--dropdown .select2-search__field {
+    padding: 4px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    /* line 65, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+    .select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
+      -webkit-appearance: none; }
+  /* line 70, C:/work/assembly/template/bower_components/select2/src/scss/_dropdown.scss */
+  .select2-search--dropdown.select2-search--hide {
+    display: none; }
+
+/* line 15, C:/work/assembly/template/bower_components/select2/src/scss/core.scss */
+.select2-close-mask {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  z-index: 99;
+  background-color: #fff;
+  filter: alpha(opacity=0); }
+
+/* line 36, C:/work/assembly/template/bower_components/select2/src/scss/core.scss */
+.select2-hidden-accessible {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+/* line 1, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+.select2-container--default .select2-selection--single {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
+  /* line 6, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px; }
+  /* line 11, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+  .select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold; }
+  /* line 17, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #999; }
+  /* line 21, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px; }
+    /* line 31, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+      border-color: #888 transparent transparent transparent;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      height: 0;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      width: 0; }
+
+/* line 52, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
+  float: left; }
+
+/* line 56, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  left: 1px;
+  right: auto; }
+
+/* line 64, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+.select2-container--default.select2-container--disabled .select2-selection--single {
+  background-color: #eee;
+  cursor: default; }
+  /* line 68, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+  .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {
+    display: none; }
+
+/* line 77, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_single.scss */
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #888 transparent;
+  border-width: 0 4px 5px 4px; }
+
+/* line 1, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default .select2-selection--multiple {
+  background-color: white;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  cursor: text; }
+  /* line 7, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    width: 100%; }
+    /* line 14, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+      list-style: none; }
+  /* line 19, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+  .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
+    color: #999;
+    margin-top: 5px;
+    float: left; }
+  /* line 27, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+  .select2-container--default .select2-selection--multiple .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 10px; }
+  /* line 35, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px; }
+  /* line 49, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px; }
+    /* line 58, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+    .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+      color: #333; }
+
+/* line 66, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
+  float: right; }
+
+/* line 70, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  margin-left: 5px;
+  margin-right: auto; }
+
+/* line 75, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+  margin-left: 2px;
+  margin-right: auto; }
+
+/* line 83, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: solid black 1px;
+  outline: 0; }
+
+/* line 90, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default.select2-container--disabled .select2-selection--multiple {
+  background-color: #eee;
+  cursor: default; }
+
+/* line 95, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/_multiple.scss */
+.select2-container--default.select2-container--disabled .select2-selection__choice__remove {
+  display: none; }
+
+/* line 6, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0; }
+
+/* line 13, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0; }
+
+/* line 20, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa; }
+
+/* line 26, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-search--inline .select2-search__field {
+  background: transparent;
+  border: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: textfield; }
+
+/* line 35, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto; }
+
+/* line 41, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results__option[role=group] {
+  padding: 0; }
+
+/* line 45, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results__option[aria-disabled=true] {
+  color: #999; }
+
+/* line 49, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #ddd; }
+
+/* line 53, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results__option .select2-results__option {
+  padding-left: 1em; }
+  /* line 56, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__group {
+    padding-left: 0; }
+  /* line 60, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -1em;
+    padding-left: 2em; }
+    /* line 64, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+    .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+      margin-left: -2em;
+      padding-left: 3em; }
+      /* line 68, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+      .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+        margin-left: -3em;
+        padding-left: 4em; }
+        /* line 72, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+        .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+          margin-left: -4em;
+          padding-left: 5em; }
+          /* line 76, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+          .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+            margin-left: -5em;
+            padding-left: 6em; }
+
+/* line 87, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #5897fb;
+  color: white; }
+
+/* line 92, C:/work/assembly/template/bower_components/select2/src/scss/theme/default/layout.scss */
+.select2-container--default .select2-results__group {
+  cursor: default;
+  display: block;
+  padding: 6px; }
+
+/* line 1, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+.select2-container--classic .select2-selection--single {
+  background-color: #f7f7f7;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  outline: 0;
+  background-image: -webkit-linear-gradient(top, white 50%, #eeeeee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), to(#eeeeee));
+  background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 255, 255, 1)', endColorstr='rgba(255, 238, 238, 0.93333)', GradientType=0); }
+  /* line 11, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+  .select2-container--classic .select2-selection--single:focus {
+    border: 1px solid #5897fb; }
+  /* line 15, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+  .select2-container--classic .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px; }
+  /* line 20, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+  .select2-container--classic .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-right: 10px; }
+  /* line 27, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+  .select2-container--classic .select2-selection--single .select2-selection__placeholder {
+    color: #999; }
+  /* line 31, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+  .select2-container--classic .select2-selection--single .select2-selection__arrow {
+    background-color: #ddd;
+    border: none;
+    border-left: 1px solid #aaa;
+    -webkit-border-top-right-radius: 4px;
+            border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    background-image: -webkit-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eeeeee), to(#cccccc));
+    background-image: linear-gradient(to bottom, #eeeeee 50%, #cccccc 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 238, 238, 0.93333)', endColorstr='rgba(255, 204, 204, 0.8)', GradientType=0); }
+    /* line 50, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+    .select2-container--classic .select2-selection--single .select2-selection__arrow b {
+      border-color: #888 transparent transparent transparent;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      height: 0;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      width: 0; }
+
+/* line 71, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear {
+  float: left; }
+
+/* line 75, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  border: none;
+  border-right: 1px solid #aaa;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  left: 1px;
+  right: auto; }
+
+/* line 90, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+.select2-container--classic.select2-container--open .select2-selection--single {
+  border: 1px solid #5897fb; }
+  /* line 93, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+  .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow {
+    background: transparent;
+    border: none; }
+    /* line 98, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+    .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
+      border-color: transparent transparent #888 transparent;
+      border-width: 0 4px 5px 4px; }
+
+/* line 106, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+.select2-container--classic.select2-container--open.select2-container--above .select2-selection--single {
+  border-top: none;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0;
+  background-image: -webkit-linear-gradient(top, white 0%, #eeeeee 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, #eeeeee));
+  background-image: linear-gradient(to bottom, white 0%, #eeeeee 50%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 255, 255, 1)', endColorstr='rgba(255, 238, 238, 0.93333)', GradientType=0); }
+
+/* line 116, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_single.scss */
+.select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
+  border-bottom: none;
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0;
+  background-image: -webkit-linear-gradient(top, #eeeeee 50%, white 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #eeeeee), to(white));
+  background-image: linear-gradient(to bottom, #eeeeee 50%, white 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 238, 238, 0.93333)', endColorstr='rgba(255, 255, 255, 1)', GradientType=0); }
+
+/* line 1, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic .select2-selection--multiple {
+  background-color: white;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  cursor: text;
+  outline: 0; }
+  /* line 11, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+  .select2-container--classic .select2-selection--multiple:focus {
+    border: 1px solid #5897fb; }
+  /* line 15, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+  .select2-container--classic .select2-selection--multiple .select2-selection__rendered {
+    list-style: none;
+    margin: 0;
+    padding: 0 5px; }
+  /* line 21, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+  .select2-container--classic .select2-selection--multiple .select2-selection__clear {
+    display: none; }
+  /* line 25, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+  .select2-container--classic .select2-selection--multiple .select2-selection__choice {
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px; }
+  /* line 40, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+  .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove {
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px; }
+    /* line 49, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+    .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover {
+      color: #555; }
+
+/* line 57, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  float: right; }
+
+/* line 61, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  margin-left: 5px;
+  margin-right: auto; }
+
+/* line 66, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+  margin-left: 2px;
+  margin-right: auto; }
+
+/* line 74, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic.select2-container--open .select2-selection--multiple {
+  border: 1px solid #5897fb; }
+
+/* line 79, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple {
+  border-top: none;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0; }
+
+/* line 87, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/_multiple.scss */
+.select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-bottom: none;
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0; }
+
+/* line 9, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa;
+  outline: 0; }
+
+/* line 16, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-search--inline .select2-search__field {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+/* line 22, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-dropdown {
+  background-color: white;
+  border: 1px solid transparent; }
+
+/* line 27, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-dropdown--above {
+  border-bottom: none; }
+
+/* line 31, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-dropdown--below {
+  border-top: none; }
+
+/* line 35, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto; }
+
+/* line 41, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-results__option[role=group] {
+  padding: 0; }
+
+/* line 45, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-results__option[aria-disabled=true] {
+  color: grey; }
+
+/* line 50, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-results__option--highlighted[aria-selected] {
+  background-color: #3875d7;
+  color: white; }
+
+/* line 55, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic .select2-results__group {
+  cursor: default;
+  display: block;
+  padding: 6px; }
+
+/* line 61, C:/work/assembly/template/bower_components/select2/src/scss/theme/classic/layout.scss */
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: #5897fb; }
+
+/*Colors*/
+/*Pixels*/
+/* line 1, C:/work/assembly/template/dist/scss/_main.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  /* line 3, C:/work/assembly/template/dist/scss/_main.scss */
+  *:focus {
+    outline: none; }
+
+/* line 7, C:/work/assembly/template/dist/scss/_main.scss */
+html {
+  background: #fff; }
+  /* line 2, C:/work/assembly/template/dist/scss/_mixins.scss */
+  html:after, html:after {
+    content: '';
+    display: table;
+    clear: both; }

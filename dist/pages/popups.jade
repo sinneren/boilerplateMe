@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  include ../blocks/head/head
+body
+  include ../blocks/modal/modal
+  div
+    a(rel="modal:open" href='index.html') Modal 1
+  div
+    a(rel="modal:open" href='#modal2') Modal 2
+  div
+    #modal2 Modal 2 Content
+  include ../blocks/last/last
+  link(rel='stylesheet' href='/blocks/modal/modal.min.css')
+  script(src='/js/modal.js')
+  

@@ -1,0 +1,11 @@
+/*Colors*/
+/*Pixels*/
+/* line 4, C:/work/assembly/template/dist/blocks/menu/menu.scss */
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  /* line 8, C:/work/assembly/template/dist/blocks/menu/menu.scss */
+  .menu__item {
+    float: left;
+    margin-right: 10px; }
