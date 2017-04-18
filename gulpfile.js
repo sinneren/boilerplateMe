@@ -75,8 +75,13 @@ gulp.task('scripts', function() {
 gulp.task('blocks', function() {
   return runSequence(
     'blocks:html',
-    'blocks:css'
+    'blocks:css',
+    'blocks:js'
   );
+});
+gulp.task('blocks:js', function() {
+  return gulp.src(distDir + '/blocks/**/*.js')
+    .pipe(gulp.dest(appDir + '/blocks'))
 });
 gulp.task('blocks:html', function() {
   return gulp.src(distDir + '/blocks/**/*.jade')
