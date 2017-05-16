@@ -3,4 +3,4 @@ AppConfig = {
   breakPointPhone: 600,
   modalWidth: 900,
   imagePath: '/img/'
-}
+};

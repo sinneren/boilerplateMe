@@ -1,18 +1,18 @@
-var gulp         = require('gulp'),
-    sass         = require('gulp-sass'),
-    minifycss    = require('gulp-clean-css'),
-    rename       = require('gulp-rename'),
-    browserSync  = require('browser-sync').create(),
-    jade         = require('gulp-jade'),
-    concat       = require('gulp-concat'),
-    imagemin     = require("gulp-imagemin"),
-    postcss      = require('gulp-postcss'),
-    cssnext      = require('postcss-cssnext'),
-    mqpacker     = require('css-mqpacker'),
-    runSequence  = require('run-sequence');
+var gulp         = require('gulp');
+var sass         = require('gulp-sass');
+var minifycss    = require('gulp-clean-css');
+var rename       = require('gulp-rename');
+var browserSync  = require('browser-sync').create();
+var jade         = require('gulp-jade');
+var concat       = require('gulp-concat');
+var imagemin     = require('gulp-imagemin');
+var postcss      = require('gulp-postcss');
+var cssnext      = require('postcss-cssnext');
+var mqpacker     = require('css-mqpacker');
+var runSequence  = require('run-sequence');
 
-var appDir = "./app";
-var distDir = "./dist";
+var appDir = './app';
+var distDir = './dist';
 
 gulp.task('browser-sync', ['styles', 'jade', 'blocks', 'img'], function() {
   browserSync.init({
@@ -23,18 +23,18 @@ gulp.task('browser-sync', ['styles', 'jade', 'blocks', 'img'], function() {
   });
 });
 
-
-gulp.task('styles', function () {
+gulp.task('styles', function() {
   var processors = [
-      cssnext({ browsers: ['last 15 versions', '> 1%', 'ie 9'] }),
+      cssnext({browsers: ['last 15 versions', '> 1%', 'ie 9']}),
       mqpacker()
   ];
   return gulp.src(distDir + '/scss/**/*.scss')
-    .pipe(sass({ style: 'expanded', sourceComments: 'map' }).on('error', sass.logError))
+    .pipe(sass({style: 'expanded', sourceComments: 'map'})
+      .on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest(appDir + '/css'))
-    .pipe(rename({suffix: '.min', prefix : ''}))
-    .pipe(minifycss({ keepSpecialComments: 1 }))
+    .pipe(rename({suffix: '.min', prefix: ''}))
+    .pipe(minifycss({keepSpecialComments: 1}))
     .pipe(gulp.dest(appDir + '/css'))
     .pipe(browserSync.stream({
       files: [appDir + '/css/**/*.css']
@@ -50,10 +50,10 @@ gulp.task('jade', function() {
     }));
 });
 
-gulp.task('img', function () {
+gulp.task('img', function() {
   return gulp.src(distDir + '/img/*')
-    .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-    .pipe(gulp.dest(appDir + '/img'))
+    .pipe(imagemin({optimizationLevel: 5, progressive: true, interlaced: true}))
+    .pipe(gulp.dest(appDir + '/img'));
 });
 
 /*Vendors generator*/
@@ -68,7 +68,7 @@ gulp.task('scripts', function() {
   ])
   .pipe(concat('vendors.js'))
   .pipe(gulp.dest(appDir + '/libs'))
-  .pipe(rename({suffix: '.min', prefix : ''}))
+  .pipe(rename({suffix: '.min', prefix: ''}));
 });
 
 /*Blocks generator*/
@@ -81,7 +81,7 @@ gulp.task('blocks', function() {
 });
 gulp.task('blocks:js', function() {
   return gulp.src(distDir + '/blocks/**/*.js')
-    .pipe(gulp.dest(appDir + '/blocks'))
+    .pipe(gulp.dest(appDir + '/blocks'));
 });
 gulp.task('blocks:html', function() {
   return gulp.src(distDir + '/blocks/**/*.jade')
@@ -93,16 +93,17 @@ gulp.task('blocks:html', function() {
 });
 gulp.task('blocks:css', function() {
   var processors = [
-    cssnext({ browsers: ['last 15 versions', '> 1%', 'ie 9'] }),
+    cssnext({browsers: ['last 15 versions', '> 1%', 'ie 9']}),
     mqpacker()
   ];
 
   return gulp.src(distDir + '/blocks/**/*.scss')
-    .pipe(sass({ style: 'expanded', sourceComments: 'map' }).on('error', sass.logError))
+    .pipe(sass({style: 'expanded', sourceComments: 'map'})
+      .on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest(appDir + '/blocks'))
-    .pipe(rename({suffix: '.min', prefix : ''}))
-    .pipe(minifycss({ keepSpecialComments: 1 }))
+    .pipe(rename({suffix: '.min', prefix: ''}))
+    .pipe(minifycss({keepSpecialComments: 1}))
     .pipe(gulp.dest(appDir + '/blocks'))
     .pipe(browserSync.stream({
       files: [appDir + '/blocks/**/*.css']
@@ -110,7 +111,7 @@ gulp.task('blocks:css', function() {
 });
 
 /*Watcher*/
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch(distDir + '/**/*.scss', ['styles', 'blocks']);
   gulp.watch(distDir + '/**/*.jade', ['jade', 'blocks']);
   gulp.watch(distDir + '/img/*', ['img']);
